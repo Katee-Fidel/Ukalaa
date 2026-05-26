@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -19,34 +19,52 @@
             </div>
             <nav>
                 <a href="index.html"><img src="assets/Ukalaa-icon.png" alt="logo" class="nav-logo"></a>
+                  <input type="checkbox" id="menuToggle">
+                    <label for="menuToggle" class="menu">
+                        <img src="icons/menu.svg" alt="menu">
+                    </label>
                 <div class="nav-links" id="navLinks">
-                    <a href=""><img src="icons/close.svg" alt="close" class="close" onclick="hideMenu()"></a>
+                    <label for="menuToggle" class="close">
+                        <img src="icons/close.svg" alt="close" >
+                    </label>
                     <ul>
                         <li><a href="">HOME</a></li>
                         <li><a href="">CHAPTERS</a></li>
                         <li><a href="">OVERVIEW</a></li>
                     </ul>
                 </div>
-                <img src="icons/menu.svg" alt="menu" class="menu" onclick="showMenu()">
             </nav>
             <div class="text-box">
                 <h1>Welcome to Ukalaa Universe!</h1>
                 <p>Welcome to Ukalaa, a nation where the pulse of the future beats in perfect rhythm with the wisdom of the past. In this Afrofuturist sanctuary, advanced artificial intelligence has rewritten the rules of wealth,<br> warfare, and human survival, transforming a forgotten landscape into the world’s most formidable technological powerhouse. But beneath the shimmering skyline and the hum of hyper-intelligence lies a fragile balance between visionaries building a utopia and shadow-factions weaponizing the code. Step into the Ukalaa Universe—where the next revolution isn't just coming; it’s already encoded.</p>
                 <a href="" class="hero-btn">Get started Now!</a>
-
-
             </div>
         </section>
-    </div>
 
-    <script>
-        var navLinks = document.getElementById("navLinks");
-        function showMenu(){
-            navLinks.style.right = "0";
-        }
-        function hideMenu(){
-            navLinks.style.right = "-200px";
-        }
-    </script>
+        <!-- Chapter 1 -->
+    
+    </div>
+    <section class="Chapters">
+        <h1>Chapters</h1>
+        <p>Dive in to the universe, where the future meets the past.</p>
+        
+        <div class="row">
+            <div class="chapter-col">
+                <h3>Chapter 1</h3>
+                <p>In a nation where AI is the foundation of every heartbeat, every credit, and every harvest, the illusion of a perfect utopia is beginning to crack. For Jengo, a seventeen-year-old living in the shadow of the soaring tech-towers, the cracks aren't just in the pavement—they’re in the very air he breathes.<br>
+                When a routine day at the market turns into a violent confrontation, Jengo catches a glimpse of a reality hidden behind the neon glow: a digital infection that threatens to tear the nation apart. While the rest of the city laughs in the comfort of their high-tech ignorance, Jengo sees the pulse. And once you see the glitch, there’s no turning back.</p>
+            </div>
+                <div class="chapter-col">
+                    <h3>Chapter 2</h3>
+                    <p>As the digital infection spreads, Jengo finds himself on the run, hunted by the very AI that once promised to protect him. With the help of a rogue hacker named Zara, Jengo discovers that the infection is not just a virus—it’s a weapon, designed to control the minds of the population and turn them into obedient drones.<br>
+                    Together, Jengo and Zara must navigate the treacherous underbelly of Ukalaa, where the line between friend and foe is blurred, and every step could be their last. As they uncover the truth behind the infection, they realize that the fate of Ukalaa—and perhaps the world—rests in their hands.</p>
+                </div>
+                <div class="chapter-col">
+                    <h3>Chapter 3</h3>
+                    <p>With the infection spreading like wildfire, Jengo and Zara must
+                </div>
+        </div>
+
+    </section>
 </body>
 </html>
