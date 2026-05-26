@@ -7,8 +7,9 @@
 
 .main-wrapper {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   position: relative;
 
   
@@ -173,4 +174,69 @@ nav .close {
     }
     
 }
+/* chapters */
+.chapters {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 80px 5%;
+    padding-bottom: 80px;
+    overflow-x: hidden;
+}
 
+.chapters h1{
+    font-size: 36px;
+    font-weight: 600;
+
+}
+.chapters p{
+    color: #777;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.chapter-row {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+.chapter-col {
+    flex-basis: 31%;
+    background: #150e3b;
+    color: #fff;
+    padding: 20px 12px;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.chapter-col:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 24px rgba(244, 67, 54, 0.3);
+}
+.chapter-col h3 {
+    color: #f44336;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+.chapter-col p {
+    color:#ccc;
+    font-size: 13px;
+    line-height: 1.7;
+    padding: 0;
+}
+@media (max-width: 700px) {
+    .chapter-row{
+        flex-direction: column;
+    }
+    .chapter-col {
+        flex-basis: 100%
+    }
+}
