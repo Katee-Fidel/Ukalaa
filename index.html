@@ -3,17 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
-
-    <title>Ukalaa Universe</title>
+<link rel="stylesheet" href="style.css">
+<title>Ukalaa Universe</title>
 </head>
 <body>
     <div class="main-wrapper">
-        <div class="navbar">
-            
-        </div>
+        <section class="header">
+            <div class="logo">
+                    <h1>Ukalaa Universe</h1>
+            </div>
+            <nav>
+                <a href="index.html"><img src="assets/Ukalaa-icon.png" alt="logo" class="nav-logo"></a>
+                <div class="nav-links" id="navLinks">
+                    <a href=""><img src="icons/close.svg" alt="close" class="close" onclick="hideMenu()"></a>
+                    <ul>
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">CHAPTERS</a></li>
+                        <li><a href="">OVERVIEW</a></li>
+                    </ul>
+                </div>
+                <img src="icons/menu.svg" alt="menu" class="menu" onclick="showMenu()">
+            </nav>
+            <div class="text-box">
+                <h1>Welcome to Ukalaa Universe!</h1>
+                <p>Welcome to Ukalaa, a nation where the pulse of the future beats in perfect rhythm with the wisdom of the past. In this Afrofuturist sanctuary, advanced artificial intelligence has rewritten the rules of wealth,<br> warfare, and human survival, transforming a forgotten landscape into the world’s most formidable technological powerhouse. But beneath the shimmering skyline and the hum of hyper-intelligence lies a fragile balance between visionaries building a utopia and shadow-factions weaponizing the code. Step into the Ukalaa Universe—where the next revolution isn't just coming; it’s already encoded.</p>
+                <a href="" class="hero-btn">Get started Now!</a>
+
+
+            </div>
+        </section>
     </div>
+
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+        function hideMenu(){
+            navLinks.style.right = "-200px";
+        }
+    </script>
 </body>
 </html>
