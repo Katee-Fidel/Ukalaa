@@ -3,9 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chapter1.css">
+    <title>Chapter 1 — The Glitch | Ukalaa Universe</title>
 </head>
 <body>
-    
+<div class="main-wrapper">
+
+    <!-- NAV — exact same structure as index.html -->
+    <section class="header chapter-hero">
+        <div class="logo">
+            <h1>Ukalaa Universe</h1>
+        </div>
+        <nav>
+            <a href="index.html">
+                <img src="assets/Ukalaa-icon.png" alt="logo" class="nav-logo">
+            </a>
+            <input type="checkbox" id="menuToggle">
+            <label for="menuToggle" class="menu">
+                <img src="icons/menu.svg" alt="menu">
+            </label>
+            <div class="nav-links" id="navLinks">
+                <label for="menuToggle" class="close">
+                    <img src="icons/close.svg" alt="close">
+                </label>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="chapter1.html" class="active-link">CHAPTERS</a></li>
+                    <li><a href="">OVERVIEW</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Reuses .text-box from style.css -->
+        <div class="text-box chapter-text-box">
+            <p class="chapter-eyebrow">Chapter 1</p>
+            <h1>The Glitch</h1>
+            <p class="chapter-location">Ukalaa Market District &mdash; Day 1</p>
+            <a href="#comic-reader" class="hero-btn">Read Now &darr;</a>
+        </div>
+    </section>
+
+    <!-- COMIC READER -->
+    <section class="comic-reader" id="comic-reader">
+
+        <div class="page-label">
+            <p class="chapter-eyebrow">Page 1 of 24</p>
+            <h2 class="page-title">The Market. The Machine. The Pulse.</h2>
+            <div class="title-divider"></div>
+        </div>
+
+        <div class="comic-page">
+
+            <!-- Panel 1: Full width establishing shot -->
+            <div class="panel panel-1">
+                <img src="assets/Homepage-image.png" alt="Ukalaa Market District establishing shot">
+                <div class="panel-overlay">
+                    <span class="panel-num">01</span>
+                    <div class="caption caption-top">
+                        "They call Ukalaa the 'Cradle of the Future.' They say the AI keeps us safe, keeps us fed, keeps us connected."
+                    </div>
+                </div>
+            </div>
+
+            <!-- Panels 2 + 3 side by side -->
+            <div class="panel-row">
+
+                <div class="panel panel-2">
+                    <img src="assets/image2.png" alt="Jengo eating mandazi staring intensely">
+                    <div class="panel-overlay">
+                        <span class="panel-num">02</span>
+                        <div class="caption caption-top">
+                            "But if you look closely enough... you start to see the fraying at the edges."
+                        </div>
+                        <div class="speech-bubble bubble-bottom-right">
+                            Stop staring, Jengo! You're going to burn that mandazi just by looking at it!
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-3">
+                    <img src="assets/image3.png" alt="Neon boda boda descends into market path">
+                    <div class="panel-overlay">
+                        <span class="panel-num">03</span>
+                        <div class="sfx">VROOOOM-ZZZT!</div>
+                        <div class="speech-bubble bubble-bottom-left">
+                            Out of the way! Tech-priority lane! Move it!
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Panels 4 + 5 side by side -->
+            <div class="panel-row">
+
+                <div class="panel panel-4">
+                    <img src="assets/image1.png" alt="Mama Zuri stands defiant before boda driver">
+                    <div class="panel-overlay">
+                        <span class="panel-num">04</span>
+                        <div class="speech-bubble bubble-top-left mama-bubble">
+                            You think because your machine floats, you own the path? This is the market, not a runway!
+                        </div>
+                        <div class="speech-bubble bubble-bottom-right driver-bubble">
+                            Check your local grid, Mama. Your stall is in a transit zone. Not my problem.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-5">
+                    <img src="assets/image4.png" alt="Extreme close-up Jengo eye glitch pulse">
+                    <div class="panel-overlay">
+                        <span class="panel-num">05</span>
+                        <div class="caption caption-bottom glitch-caption">
+                            "There it is. Not a grid error. That's a pulse... and it's feeding on the market's power."
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div><!-- /comic-page -->
+
+        <!-- Page nav — reuses .hero-btn from style.css -->
+        <div class="page-nav">
+            <a href="#" class="hero-btn btn-prev">&#8592; Previous</a>
+            <span class="page-indicator">Page <span>01</span> / 24</span>
+            <a href="#" class="hero-btn btn-next">Next &#8594;</a>
+        </div>
+
+    </section>
+
+</div>
 </body>
 </html>
