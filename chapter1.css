@@ -1,0 +1,340 @@
+/* ════════════════════════════════════════
+   chapter1.css
+   Loads AFTER style.css — only adds what
+   index.html doesn't already have
+   ════════════════════════════════════════ */
+
+/* ── Hero: shorter than index.html full hero ── */
+.chapter-hero {
+    min-height: 55vh;
+    background-image: linear-gradient(rgba(4,9,30,0.85), rgba(4,9,30,0.85)),
+                      url(assets/background-image.png);
+}
+
+/* ── Chapter eyebrow label ── */
+.chapter-eyebrow {
+    font-size: 12px;
+    letter-spacing: 5px;
+    color: #9b30ff;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* ── Chapter title gradient — overrides .text-box h1 ── */
+.chapter-text-box h1 {
+    font-family: "Bangers", cursive;
+    font-size: clamp(48px, 10vw, 90px);
+    letter-spacing: 4px;
+    background: linear-gradient(135deg, #f0d080, #c9a84c, #9b30ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── Chapter location subtitle ── */
+.chapter-location {
+    font-size: 13px;
+    letter-spacing: 3px;
+    color: #7a7090;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+/* ── Active nav link ── */
+.active-link {
+    color: #c9a84c !important;
+    border-bottom: 2px solid #c9a84c;
+    padding-bottom: 2px;
+}
+
+/* ════════════════════════════════════════
+   COMIC READER SECTION
+   ════════════════════════════════════════ */
+.comic-reader {
+    width: 100%;
+    background: #04091e;
+    padding: 60px 5% 80px;
+}
+
+/* ── Page label ── */
+.page-label {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.page-title {
+    font-family: "Bangers", cursive;
+    font-size: clamp(22px, 4vw, 38px);
+    letter-spacing: 3px;
+    color: #fff;
+    margin-top: 6px;
+}
+
+.title-divider {
+    width: 180px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #c9a84c, transparent);
+    margin: 14px auto 0;
+}
+
+/* ════════════════════════════════════════
+   COMIC PAGE & PANELS
+   ════════════════════════════════════════ */
+.comic-page {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: #080810;
+    border: 1px solid #2a2050;
+    padding: 5px;
+    box-shadow: 0 0 60px rgba(155,48,255,0.1);
+}
+
+/* Two panels side by side */
+.panel-row {
+    display: flex;
+    gap: 5px;
+}
+
+.panel-row .panel {
+    flex: 1;
+}
+
+/* ── Base panel ── */
+.panel {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #1a1535;
+    cursor: pointer;
+    background: #0e0b1f;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Individual panel heights */
+.panel-1 { height: 360px; }
+.panel-2 { height: 300px; }
+.panel-3 { height: 300px; }
+.panel-4 { height: 300px; }
+.panel-5 { height: 300px; }
+
+/* ── Energy glow on hover ── */
+.panel:hover {
+    transform: scale(1.015);
+    z-index: 10;
+    box-shadow:
+        0 0 16px 4px rgba(155,48,255,0.6),
+        0 0 32px 8px rgba(155,48,255,0.25);
+}
+
+.panel:hover img {
+    filter: contrast(1.1) saturate(1.2) brightness(1.05);
+    transform: scale(1.03);
+}
+
+/* Panel 5 always glows — the glitch panel */
+.panel-5 {
+    box-shadow:
+        0 0 20px 5px rgba(155,48,255,0.4),
+        inset 0 0 30px rgba(155,48,255,0.1);
+}
+
+/* ── Panel overlay container ── */
+.panel-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+/* ── Panel number badge ── */
+.panel-num {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(8,8,16,0.88);
+    border: 1px solid #7a6020;
+    color: #c9a84c;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 8px;
+    z-index: 5;
+}
+
+/* ════════════════════════════════════════
+   CAPTIONS — Jengo's voice-over boxes
+   ════════════════════════════════════════ */
+.caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: rgba(14,11,31,0.88);
+    border-left: 3px solid #c9a84c;
+    color: #f0d080;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.6;
+    padding: 8px 14px;
+    letter-spacing: 0.3px;
+    transform: skewY(-1deg); /* comic skew effect */
+}
+
+.caption-top    { top: 0; }
+.caption-bottom { bottom: 0; }
+
+/* Glitch caption — purple for panel 5 */
+.glitch-caption {
+    border-left: 3px solid #9b30ff;
+    color: #d4aaff;
+    background: rgba(14,11,31,0.92);
+    text-shadow: 0 0 8px rgba(155,48,255,0.5);
+}
+
+/* ════════════════════════════════════════
+   SFX TEXT
+   ════════════════════════════════════════ */
+.sfx {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-6deg) skewX(-4deg);
+    font-family: "Bangers", cursive;
+    font-size: clamp(26px, 4vw, 44px);
+    letter-spacing: 3px;
+    color: #fff;
+    text-shadow:
+        3px 3px 0 #f44336,
+        6px 6px 0 rgba(244,67,54,0.3),
+        0 0 20px rgba(244,67,54,0.8);
+    z-index: 10;
+    white-space: nowrap;
+}
+
+/* ════════════════════════════════════════
+   SPEECH BUBBLES
+   ════════════════════════════════════════ */
+.speech-bubble {
+    position: absolute;
+    background: #fff;
+    color: #080810;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: 2px solid #080810;
+    max-width: 55%;
+    z-index: 10;
+    transform: skewX(-1deg); /* subtle comic skew */
+}
+
+/* Bubble tail arrow */
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    border: 8px solid transparent;
+}
+
+/* Position variants */
+.bubble-top-right            { top: 12px; right: 12px; text-align: right; }
+.bubble-top-right::after     { border-bottom-color: #080810; top: -18px; right: 16px; }
+
+.bubble-bottom-left          { bottom: 12px; left: 12px; }
+.bubble-bottom-left::after   { border-top-color: #080810; bottom: -18px; left: 16px; }
+
+.bubble-top-left             { top: 12px; left: 12px; }
+.bubble-top-left::after      { border-bottom-color: #080810; top: -18px; left: 16px; }
+
+.bubble-bottom-right         { bottom: 12px; right: 12px; text-align: right; }
+.bubble-bottom-right::after  { border-top-color: #080810; bottom: -18px; right: 16px; }
+
+/* Mama Zuri — red, bold */
+.mama-bubble {
+    border-color: #f44336;
+    background: #fff5f5;
+    max-width: 65%;
+    font-size: 10px;
+}
+
+/* Boda driver — cool blue */
+.driver-bubble {
+    border-color: #00b4d8;
+    background: #f0faff;
+    font-size: 10px;
+}
+
+/* ════════════════════════════════════════
+   PAGE NAVIGATION
+   Reuses .hero-btn from style.css
+   Only overrides colors here
+   ════════════════════════════════════════ */
+.page-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.btn-prev {
+    border-color: #2a2050 !important;
+    color: #7a7090 !important;
+}
+
+.btn-prev:hover {
+    border-color: #9b30ff !important;
+    background: rgba(155,48,255,0.1) !important;
+    color: #fff !important;
+}
+
+.btn-next {
+    border-color: #c9a84c !important;
+    color: #c9a84c !important;
+}
+
+.btn-next:hover {
+    border-color: #f0d080 !important;
+    background: rgba(201,168,76,0.15) !important;
+    color: #f0d080 !important;
+}
+
+.page-indicator {
+    font-family: "Bangers", cursive;
+    font-size: 20px;
+    letter-spacing: 3px;
+    color: #7a7090;
+}
+
+.page-indicator span {
+    color: #c9a84c;
+}
+
+/* ════════════════════════════════════════
+   RESPONSIVE
+   ════════════════════════════════════════ */
+@media (max-width: 700px) {
+    .chapter-hero   { min-height: 45vh; }
+
+    .panel-row      { flex-direction: column; }
+
+    .panel-1,
+    .panel-2,
+    .panel-3,
+    .panel-4,
+    .panel-5        { height: 220px; }
+
+    .speech-bubble  { font-size: 9px; padding: 5px 8px; max-width: 72%; }
+    .caption        { font-size: 10px; }
+    .sfx            { font-size: 24px; }
+    .page-nav       { gap: 14px; }
+}
